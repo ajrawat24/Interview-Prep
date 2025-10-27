@@ -6,13 +6,14 @@ import java.util.Set;
 
 public class FindDuplicates {
     public static void main(String[] str){
-        int[] a= {1,2,3,4,5,6,7,8};
+       /* int[] a= {1,2,3,4,5,6,7,8};*/
+        int[] arr = {1, 2, 4, 5, 3, 2, 9, 5};
         Map<Integer,Integer> map=new HashMap<>();
         // First we have to prepare the map
         // if each element of array get from map if null asign key as array element and value 1
         // if element already present increase the counter and put in the map
         // now map is ready with key and value
-        for(int no:a)
+        for(int no:arr)
         {
             Integer count=map.get(no);
             if(count==null) {
