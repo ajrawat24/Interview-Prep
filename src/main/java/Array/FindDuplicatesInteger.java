@@ -3,7 +3,7 @@ package Array;
 public class FindDuplicatesInteger {
 
     public static void main(String[] args) {
-        int[] arr= {1,2,4,6,3,9,5,};
+        int[] arr= {1,1,4,4,3,9,5,};
         Boolean hasDuplicates=false;
         for(int i=0;i<arr.length;i++){
 

@@ -12,7 +12,6 @@ package String;
 public class RemoveDuplicateFromString {
 
     public static void main(String[] args) {
-
         String inputString = "Programming";
         StringBuilder outputString = new StringBuilder();
 
