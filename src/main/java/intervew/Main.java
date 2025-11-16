@@ -1,32 +1,28 @@
 package intervew;
-
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
 import java.util.Arrays;
-
-public class MoveAllZero {
+class Main {
     public static void main(String[] args) {
-
         int[] arr={1,3,00,000,45,90};
-        System.out.println(Arrays.toString(arr));
-
         int left=0;
 
-        for(int i=0;i<arr.length;i++)
+        for(int i=0; i<arr.length; i++)
         {
-            if(arr[i]!=0){
+            if(arr[i]!=0)
+            {
                 arr[left]=arr[i];
                 left++;
-            }
 
+            }
         }
-        while (left<arr.length)
+        while (arr[left]< arr.length)
         {
             arr[left]=0;
             left++;
-
         }
 
-      System.out.println(Arrays.toString(arr));
-
+        System.out.println(Arrays.toString(arr));
 
     }
 }
