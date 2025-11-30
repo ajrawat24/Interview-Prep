@@ -1,62 +1,40 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
 package String;
+class Anagrams {
+    public static void main(String[] args) {
+        //listen → silent
+        String str1= "listen";
+        String str2= "silent";
+        boolean result=isAnagram(str1,str2);
+        System.out.println("String is anagram==="+ result);
+    }
 
-import java.io.*;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
-public class Anagrams {
-
-    /* function to check whether two strings are
-    anagram of each other */
-    static boolean areAnagram(char[] str1, char[] str2)
+    public static boolean isAnagram(String str1, String str2)
     {
-        // Get lenghts of both strings
-        int n1 = str1.length;
-        int n2 = str2.length;
-        // If length of both strings is not same,
-        // then they cannot be anagram
-        if(n1!=n2)
+        int[] counts= new int[26]; // initialize the array bucket
+
+        for(int i=0; i<str1.length(); i++) // fill the bucket
         {
-            return false;
+            counts[str1.charAt(i)-'a']++;
+
+        }
+        for(int i=0; i<str2.length(); i++) // empty the bucket
+        {
+            counts[str2.charAt(i)-'a']--;
+
         }
 
-        // Sort both strings
-
-        Arrays.sort(str1);
-        Arrays.sort(str2);
-        for(int i=0;i<n1;i++)
+        for(int count:counts)
         {
-            if(str1[i]==str2[i])
+            if(count!=0)
             {
-                return true;
+                return false;
             }
 
         }
-        return false;
-        // Compare sorted strings
+        return true;
 
     }
 
-    /* Driver program to test to print printDups*/
-    public static void main(String[] args)
-    {
-
-        String inputString1 = "listen";
-        String inputString2 = "silent";
-
-
-        if(areAnagram(inputString1.toCharArray(), inputString2.toCharArray())){
-
-            System.out.println("Anagrams found");
-
-        }
-        else{
-            System.out.println("Anagrams not found");
-        }
-
-    }
 }
-
-
-

@@ -6,8 +6,8 @@ public class DutchAlgo {
 
     public static void main(String[] args) {
 
-        int[] inputArray = {2, 0, 2, 1, 1, 0};
-        int left = 0;
+        int[] inputArray = {2,0,2, 1, 1, 0};
+        int start = 0;
         int middle = 0;
         int end = inputArray.length - 1;
 
@@ -17,17 +17,17 @@ public class DutchAlgo {
 
 
                 case 0:
-                    swapNumbers(inputArray, left, middle);
-                        left++;
+                    swapNumbers(inputArray, start, middle);
+                    start++;
                         middle++;
                         break;
 
                 case 1:
-                    swapNumbers(inputArray, left, middle);
+                    swapNumbers(inputArray, start, middle);
                     middle++;
 
                 case 2:
-                    swapNumbers(inputArray, left, end);
+                    swapNumbers(inputArray, start, end);
                     end--;
                     break;
 
